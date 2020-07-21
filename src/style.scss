@@ -1,8 +1,8 @@
 $primary: #00a1ff;
 $white: #FFF;
-
+$light-bg: #f3f3f3;
+$black: #3a3a3a;
 $hover : #2592e7;
-$enable-gradients: true;
 
 $theme-colors: (
   "primary": $primary
@@ -120,6 +120,72 @@ code {
   flex-grow: unset;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 9;
+}
+
+.layout{
+  background-color: $light-bg;
+  margin-top: 59px;
+}
+
+.categories{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 7px;
+  .category {
+    margin-bottom: 4px;
+    padding: 0px 40px;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover{
+      color: $hover;
+    }
+    span{
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+}
+
+.card{
+  border: none;
+  .heading{
+    text-align: center;
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+  }
+  .footer{
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 5px;
+  }
+}
+
+.card-hover{
+  transition: all.3s;
+  &:hover{
+    box-shadow: 0 0.5rem 1rem rgba(58, 58, 58, 0.15) !important;
+  }
+}
+
+.slider{
+  scroll-behavior: smooth;
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
 // Responsive
 @include media-breakpoint-down(xs){
   .bg-primary .container{
@@ -152,9 +218,19 @@ code {
     }
     .navbar-brand{
       margin-right: 0px;
+      svg{
+        margin-right: 0px !important;
+      }
     }
     .navbar-toggler{
       padding: 0px;
     }
+  }
+  .categories{
+    width: 100%;
+    overflow: scroll;
+  }
+  .layout{
+    margin-top: 55px;
   }
 }

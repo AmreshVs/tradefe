@@ -5,7 +5,7 @@ import { Search, List, HexagonFill, ShopWindow, Telephone, Person } from 'react-
 
 export default function index() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light shadow">
+    <nav className="navbar navbar-expand-lg navbar-light sticky">
       <div>
         <a className="navbar-brand" href="#">
           {/* <img src="https://pngimage.net/wp-content/uploads/2018/06/logo-placeholder-png.png" width="30" height="30" className="d-inline-block align-top" alt="" loading="lazy" /> */}
