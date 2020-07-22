@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Home from 'screen/home';
+import Home from 'pages/home';
 
 function App() {
   return (

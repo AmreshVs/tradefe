@@ -1,11 +1,13 @@
 import React from 'react';
 
-export default function index({ header, footer, children, hover }) {
+export default function index({ header, footer, rightAction, children, hover }) {
+  console.log(rightAction)
   return (
-    <div className={`card p-3 mb-3 shadow-sm ${hover ? 'card-hover' : ''}`}>
+    <div className={`card p-3 shadow-sm ${hover ? 'card-hover' : ''}`}>
       {header &&
         <div className="heading">
-          <h4>For a productive home office</h4>
+          <h4>{header}</h4>
+          {rightAction}
         </div>
       }
       {children}

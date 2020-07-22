@@ -5,6 +5,7 @@ import Carousel from './Carousel';
 import Categories from './Categories';
 import CategoryProducts from './CategoryProducts';
 import ProductSlider from './ProductSlider';
+import SubCategories from './SubCategories';
 
 export default function index() {
   return (
@@ -15,6 +16,7 @@ export default function index() {
         <Carousel />
         <CategoryProducts />
         <ProductSlider />
+        <SubCategories />
       </div>
     </>
   )
