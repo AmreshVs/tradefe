@@ -1,10 +1,16 @@
 import React from 'react';
 
-import Home from 'pages/home';
+import Products from 'pages/products';
+import Navbar from 'components/navbar';
 
 function App() {
   return (
-    <Home />
+    <>
+      <Navbar />
+      <div className="layout">
+        <Products />
+      </div>
+    </>
   );
 }
 

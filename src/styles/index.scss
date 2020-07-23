@@ -8,6 +8,8 @@ $theme-colors: (
   "primary": $primary
 );
 
+$enable-responsive-font-sizes: true;
+
 // Bootstrap Styles
 @import './boostrap.scss';
 
@@ -15,6 +17,7 @@ $theme-colors: (
 @import '../components/card';
 @import '../components/navbar';
 @import '../components/slider';
+@import '../components/product';
 
 // Pages Styles
 @import '../pages/home';
@@ -31,7 +34,8 @@ body {
 
 .layout{
   background-color: $light-bg;
-  margin-top: 59px;
+  margin-top: 58.5px;
+  min-height: calc(100vh - 58.5px);
 }
 
 // Responsive
@@ -46,6 +50,36 @@ body {
     padding: 3px !important;
   }
   .min-padd-10{
-    padding: 10px !important;
+    padding: 0px 10px !important;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .btn{
+    font-size: 14px;
+  }
+
+  h1{
+    font-size: 22px;
+  }
+
+  h3{
+    font-size: 17px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  h1{
+    font-size: 25px;
+  }
+
+  h3{
+    font-size: 17px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  h1{
+    font-size: 25px;
   }
 }

@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Search, List, HexagonFill, ShopWindow, Telephone, Person } from 'react-bootstrap-icons';
 
-export default function index() {
+export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light sticky">
       <div>

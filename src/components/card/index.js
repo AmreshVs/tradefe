@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function index({ header, footer, rightAction, children, hover }) {
-  console.log(rightAction)
+export default function Card({ header, footer, rightAction, children, hover }) {
+
   return (
     <div className={`card p-3 shadow-sm ${hover ? 'card-hover' : ''}`}>
       {header &&

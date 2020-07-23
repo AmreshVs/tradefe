@@ -4,7 +4,7 @@ import { ChevronRight, ChevronLeft } from 'react-bootstrap-icons';
 
 import Card from 'components/card';
 
-export default function ({ header, rightAction, children }) {
+export default function Slider({ header, rightAction, children }) {
 
   let slider = createRef(null);
   let [scrollLeft, setScrollLeft] = useState(0);
