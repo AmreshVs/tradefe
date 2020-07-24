@@ -3,7 +3,7 @@ import { TelephoneOutboundFill, ChatRightQuoteFill, PatchCheckFll } from 'react-
 
 import Card from 'components/card';
 
-export default function Product() {
+function Product() {
 
   const Footer = () => {
     return (
@@ -11,7 +11,7 @@ export default function Product() {
         <div className="row">
           <div className="col-md-6 seller">
             <h5 className="mb-0">
-              <PatchCheckFll size={20} className="text-info mr-2" />
+              <PatchCheckFll size={20} className="text-primary mr-2" />
               Super Plastic Coats Private Limited
             </h5>
             <p className="text-muted mb-0">Coimbatore</p>
@@ -58,3 +58,5 @@ export default function Product() {
     </Card>
   )
 }
+
+export default React.memo(Product);
