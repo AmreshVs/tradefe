@@ -2,9 +2,9 @@ import React from 'react';
 import { Geo, FunnelFill } from 'react-bootstrap-icons';
 import { Typeahead } from 'react-bootstrap-typeahead';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
+import InfiniteDataScroll from 'react-infinite-data';
 
 import Product from 'components/product';
-import InfiniteDataScroll from 'react-infinite-data';
 
 export default function Products() {
 

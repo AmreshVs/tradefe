@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Products from 'pages/products';
+import ProductDetail from 'pages/productDetail';
 import Navbar from 'components/navbar';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <>
       <Navbar />
       <div className="layout">
-        <Products />
+        <ProductDetail />
       </div>
     </>
   );

@@ -1,0 +1,16 @@
+.productMagnify{
+  z-index: 2;
+  text-align: center;
+
+}
+
+.productDetail{
+
+  .price{
+    font-size: 19px;
+  }
+}
+
+.productMagnify > div{
+  display: inline-block;
+}
