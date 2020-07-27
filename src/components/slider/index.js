@@ -2,24 +2,23 @@
 import React, { useState, createRef, useEffect } from 'react';
 import { ChevronRight, ChevronLeft } from 'react-bootstrap-icons';
 
-import Card from 'components/card';
-
-export default function Slider({ header, rightAction, children }) {
+export default function Slider({ children }) {
 
   let slider = createRef(null);
+  let sliderParent = createRef(null);
   let [scrollLeft, setScrollLeft] = useState(0);
   let [next, setNext] = useState(1);
   let scrollWidth = 0;
-  let screenWidth = 0;
+  let parentWidth = 0;
   let difference = 0;
   let scrollBy = 0;
 
   const init = () => {
     scrollWidth = slider.current.scrollWidth;
-    screenWidth = window.innerWidth;
+    parentWidth = sliderParent.current.clientWidth;
     setScrollLeft(slider.current.scrollLeft);
-    difference = (scrollWidth - screenWidth) + 17;
-    scrollBy = difference > screenWidth ? (screenWidth - 120) : difference;
+    difference = (scrollWidth - parentWidth) + 17;
+    scrollBy = difference > parentWidth ? (parentWidth - 120) : difference;
 
     slider.current.onwheel = function (e) {
       if (e.shiftKey === true) {
@@ -46,10 +45,10 @@ export default function Slider({ header, rightAction, children }) {
 
   const handleNext = () => {
     init();
-
     if (scrollLeft + 17 > difference) {
       setNext(0);
     }
+
 
     if (scrollLeft < difference) {
       slider.current.scrollBy(scrollBy, 0);
@@ -61,32 +60,28 @@ export default function Slider({ header, rightAction, children }) {
   }
 
   return (
-    <div className="container-fluid pb-3">
+    <div className="container-fluid pb-3" ref={sliderParent}>
       <div className="row">
         <div className="col-12 pr-4 pl-4 min-padd-10">
-          <Card header={header} rightAction={rightAction} hover>
-            <div className="slider" ref={slider}>
-              <div className="slider-control">
-                <div>
-                  {scrollLeft > 0 &&
-                    <button className="btn btn-light" onClick={handlePrev}>
-                      <ChevronLeft size={23} />
-                    </button>
-                  }
-                </div>
-                <div>
-                  {next === 1 &&
-                    <button className="btn btn-light" onClick={handleNext}>
-                      <ChevronRight size={23} />
-                    </button>
-                  }
-                </div>
-              </div>
-              <div className="d-flex">
-                {children}
-              </div>
+          <div className="slider" ref={slider}>
+            <div className="control-left">
+              {scrollLeft > 0 &&
+                <button className="btn btn-light" onClick={handlePrev}>
+                  <ChevronLeft size={23} />
+                </button>
+              }
             </div>
-          </Card>
+            <div className="control-right">
+              {next === 1 &&
+                <button className="btn btn-light" onClick={handleNext}>
+                  <ChevronRight size={23} />
+                </button>
+              }
+            </div>
+            <div className="d-flex">
+              {children}
+            </div>
+          </div>
         </div>
       </div>
     </div>

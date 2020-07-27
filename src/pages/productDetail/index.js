@@ -1,62 +1,51 @@
 import React from 'react';
-import ReactImageMagnify from 'react-image-magnify';
 
-import Card from 'components/card';
+import ProductImageDesc from './productImageDesc';
+import ProductDescription from './productDescription';
+import CompanyDetails from './companyDetails';
+import Requirement from './requirement';
+import Seller from './seller';
+import Recommended from './recommended';
+import SimilarProducts from './similarProducts';
 
 export default function ProductDetail() {
-
-  const Attributes = ({ pkey, pvalue }) => {
-    return (
-      <div className="row pb-1">
-        <div className="col-md-5">
-          {pkey}
-        </div>
-        <div className="col-md-7">
-          <span className="text-muted">
-            {pvalue}
-          </span>
-        </div>
-      </div>
-    )
-  }
 
   return (
     <>
       <div className="container-fluid pb-3 pt-3 productDetail">
-        <div className="row">
-          <div className="col-md-9">
-            <Card header="Product Images & Details" hover>
-              <div className="row">
-                <div className="col-6 productMagnify">
-                  <ReactImageMagnify {...{
-                    smallImage: {
-                      alt: 'Wristwatch by Ted Baker London',
-                      src: 'https://ethanselzer.github.io/react-image-magnify/static/media/wristwatch_687.8ea75ffc.jpg',
-                      width: 400,
-                      height: 600,
-                    },
-                    largeImage: {
-                      src: 'https://ethanselzer.github.io/react-image-magnify/static/media/wristwatch_687.8ea75ffc.jpg',
-                      width: 1200,
-                      height: 1800
-                    }
-                  }}
-                  />
-                </div>
-                <div className="col-6">
-                  <h2 className="mb-0">Disposable KN95 Mask</h2>
-                  <div>
-                    <span className="price text-success">₹ 250</span>
-                    <span className="text-muted"> / Piece</span>
-                  </div>
-                  <div className="pt-2">
-                    {Array(6).fill(0).map((item, index) => (
-                      <Attributes pkey="Disposability" pvalue="Disposable" key={index} />
-                    ))}
-                  </div>
+        <div className="row mb-3">
+          <div className="col-md-8 col-lg-9">
+            <div className="row">
+              <div className="col-md-12 mb-3 rightPadd">
+                <ProductImageDesc />
+              </div>
+              <div className="col-md-12 mb-3 rightPadd">
+                <ProductDescription />
+              </div>
+              <div className="col-md-12 rightPadd">
+                <CompanyDetails />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4 col-lg-3">
+            <div className="sticky-item">
+              <div className="sticky-component">
+                <Requirement />
+                <div className="mt-3">
+                  <Seller />
                 </div>
               </div>
-            </Card>
+            </div>
+          </div>
+        </div>
+        <div className="row mb-3">
+          <div className="col-md-12">
+            <SimilarProducts />
+          </div>
+        </div>
+        <div className="row mb-3">
+          <div className="col-md-12">
+            <Recommended />
           </div>
         </div>
       </div>

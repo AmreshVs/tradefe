@@ -42,7 +42,7 @@ function Product() {
           </div>
           <div className="col-md-8">
             <h3 className="">Ply Ear loop Disposable Face Mask</h3>
-            <div className="d-flex">
+            <div className="d-flex align-items-center">
               <p className="price text-success mb-1 pr-1">₹200</p>
               <p className="text-muted mb-1">/ Pack</p>
             </div>

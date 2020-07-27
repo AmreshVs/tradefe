@@ -72,14 +72,23 @@
   z-index: 9;
 }
 
+@include media-breakpoint-down(sm){
+  .brandName{
+    display: none;
+  }
+  .navbar-brand{
+    margin-right: 0px;
+    svg{
+      margin-right: 0px !important;
+    }
+  }
+}
+
 // Responsive
-@include media-breakpoint-down(xs){
+@include media-breakpoint-down(md){
   .navbar-toggler{
     border: none;
     font-size: 16px;
-  }
-  .brandName{
-    display: none;
   }
   .navbar{
     .navbar-nav{
@@ -94,12 +103,6 @@
     }
     .dropdown:hover .dropdown-menu {
       position: absolute;
-    }
-    .navbar-brand{
-      margin-right: 0px;
-      svg{
-        margin-right: 0px !important;
-      }
     }
     .navbar-toggler{
       padding: 0px;
