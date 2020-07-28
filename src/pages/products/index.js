@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Geo, FunnelFill } from 'react-bootstrap-icons';
 import { Typeahead } from 'react-bootstrap-typeahead';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
@@ -6,10 +6,18 @@ import InfiniteDataScroll from 'react-infinite-data';
 
 import Product from 'components/product';
 
+const Loader = () => (
+  <div className="text-center w-100">
+    <div className="spinner-border text-primary" role="status">
+      <span className="sr-only">Loading...</span>
+    </div>
+  </div>
+)
+
 export default function Products() {
 
-  let [arrLength, setArrLength] = React.useState(10);
-  let [loadMore, setLoadMore] = React.useState(true);
+  let [arrLength, setArrLength] = useState(10);
+  let [loadMore, setLoadMore] = useState(true);
 
   const loadData = async () => {
     let getData = new Promise(resolve => {
@@ -53,14 +61,6 @@ export default function Products() {
     )
   }
 
-  const Loader = () => (
-    <div className="text-center w-100">
-      <div className="spinner-border text-primary" role="status">
-        <span className="sr-only">Loading...</span>
-      </div>
-    </div>
-  )
-
   return (
     <>
       <Header />
@@ -69,7 +69,7 @@ export default function Products() {
           <InfiniteDataScroll loadMore={loadMore} loadData={loadData} loader={<Loader />}>
             {Array(arrLength).fill(0).map((item, index) => (
               <div className="col-md-12 col-lg-6 mb-3 pl-0" key={index}>
-                <Product index={index} />
+                <Product key={index} />
               </div>
             ))}
           </InfiniteDataScroll>

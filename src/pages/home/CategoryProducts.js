@@ -4,10 +4,10 @@ import Card from 'components/card';
 
 export default function CategoryProducts() {
   return (
-    <div className="container-fluid">
-      <div className="row pb-0 pl-3 pr-3 pt-3 pb-2 min-padd-3">
+    <div className="container-fluid mt-3">
+      <div className="row pr-3 min-padd-3">
         {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
-          <div className="col-md-3 p-2" key={index}>
+          <div className="col-xl-3 col-lg-4 col-md-6 px-2 pl-xl-3 pr-xl-0 pl-md-3 pr-md-0 mb-3" key={index}>
             <Card
               header="For a productive home office"
               footer={<button className="btn btn-outline-primary btn-sm">View More</button>}

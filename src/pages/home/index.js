@@ -11,15 +11,12 @@ import MoreCategories from './MoreCategories';
 export default function index() {
   return (
     <div className="home">
-      <Navbar />
-      <div className="layout">
-        <Categories />
-        <Carousel />
-        <CategoryProducts />
-        <ProductSlider />
-        <SubCategories />
-        <MoreCategories />
-      </div>
+      <Categories />
+      <Carousel />
+      <CategoryProducts />
+      <ProductSlider />
+      <SubCategories />
+      <MoreCategories />
     </div>
   )
 }
