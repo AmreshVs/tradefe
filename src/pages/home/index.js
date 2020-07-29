@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Navbar from 'components/navbar';
 import Carousel from './Carousel';
 import Categories from './Categories';
 import CategoryProducts from './CategoryProducts';

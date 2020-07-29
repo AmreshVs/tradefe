@@ -3,9 +3,10 @@ import { TelephoneOutboundFill, ChatRightQuoteFill, PatchCheckFll } from 'react-
 
 import Card from 'components/card';
 
-function Product() {
+function Product({ index, handleClick }) {
 
   const Footer = () => {
+
     return (
       <div className="container-fluid border-top pt-3 pl-0">
         <div className="row">
@@ -23,7 +24,7 @@ function Product() {
             </button>
           </div>
           <div className="col-md-3 col-6 pr-0">
-            <button className="btn btn-outline-primary w-100 rounded-pill">
+            <button className="btn btn-outline-primary w-100 rounded-pill" onClick={() => handleClick(index)} data-toggle="modal" data-target="#quoteModal">
               <ChatRightQuoteFill className="mr-2" />
               Request Quote
             </button>

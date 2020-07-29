@@ -1,7 +1,8 @@
 import React from 'react';
 
-import Home from 'pages/home';
+import Products from 'pages/products';
 import Navbar from 'components/navbar';
+import Home from 'pages/home';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div className="layout">
         <Home />
       </div>
+      {/* <QuotePopup /> */}
     </>
   );
 }

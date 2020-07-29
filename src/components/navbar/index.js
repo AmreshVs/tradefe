@@ -3,6 +3,7 @@ import React from 'react';
 import { Search, List, HexagonFill, ShopWindow, Telephone, Person } from 'react-bootstrap-icons';
 
 import Login from 'components/login';
+import Signup from 'components/signup';
 
 export default function Navbar() {
   return (
@@ -37,22 +38,18 @@ export default function Navbar() {
             <li className="nav-item dropdown">
               <Person color="#FFF" size={18} />
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink">
-                Sign In
+                Account
             </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a className="dropdown-item" href="#">Action</a>
-                <a className="dropdown-item" href="#">Another action</a>
-                <a className="dropdown-item" href="#">Something else here</a>
-                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#loginModal">
-                  Launch demo modal
-                </button>
+                <a className="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+                <a className="dropdown-item" href="#" data-toggle="modal" data-target="#signupModal">Signup</a>
               </div>
             </li>
           </ul>
         </div>
       </nav>
-
       <Login />
+      <Signup />
     </>
   )
 }

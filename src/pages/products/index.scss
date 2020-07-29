@@ -1,0 +1,33 @@
+.filterElements{
+  display: contents;
+
+  .search{
+    display: contents;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .products{
+    .heading{
+      text-align: center;
+    }
+    
+    .filter{
+      padding: 10px 0px;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .products{
+    .filterElements{
+      display: grid;
+    }
+
+    .search{
+      display: flex;
+    }
+  }
+}

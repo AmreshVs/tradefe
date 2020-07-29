@@ -44,7 +44,7 @@ export default function ProductImageDesc() {
               </button>
             </div>
             <div className="col-md-5 col-lg-6 col-6">
-              <button className="btn btn-outline-primary w-100 rounded-pill">
+              <button className="btn btn-outline-primary w-100 rounded-pill" data-toggle="modal" data-target="#quoteModal">
                 <ChatRightQuoteFill className="mr-2" />
                 Request Quote
               </button>

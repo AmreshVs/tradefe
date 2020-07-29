@@ -20,10 +20,12 @@ $enable-responsive-font-sizes: true;
 @import '../components/product';
 @import '../components/subCategory';
 @import '../components/login';
+@import '../components/signup';
 
 // Pages Styles
 @import '../pages/home';
 @import '../pages/productDetail';
+@import '../pages/products';
 
 // Common Styles
 body {

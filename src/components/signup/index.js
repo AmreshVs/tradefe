@@ -1,9 +1,9 @@
 import React from 'react';
 import { X } from 'react-bootstrap-icons';
 
-export default function Login() {
+export default function Signup() {
   return (
-    <div className="modal fade login" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
+    <div className="modal fade signup" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalTitle" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered" role="document">
         <div className="modal-content shadow">
           <div className="modal-body">
@@ -13,7 +13,7 @@ export default function Login() {
             <div className="p-xl-5 p-md-3">
               <h2 className="modal-title text-center">Welcome to Trade Hub</h2>
               <p className="text-center text-muted mb-2">The hub of Premium traders</p>
-              <h3 className="text-center text-primary">Sign In</h3>
+              <h3 className="text-center text-primary">Sign Up</h3>
               <div className="form-group">
                 <label>Email ID</label>
                 <input type="text" className="form-control" />
@@ -23,9 +23,9 @@ export default function Login() {
                 <input type="password" className="form-control" />
               </div>
               <div className="form-group pt-3">
-                <button className="btn btn-primary w-100">Login</button>
+                <button className="btn btn-primary w-100">Signup</button>
               </div>
-              <p className="text-center">New user? <a href="www.signup" data-dismiss="modal" data-toggle="modal" data-target="#signupModal">Create Account</a></p>
+              <p className="text-center">Existing user? <a href="www.signup" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Login</a></p>
             </div>
           </div>
         </div>
