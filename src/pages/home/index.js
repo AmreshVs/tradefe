@@ -6,12 +6,19 @@ import CategoryProducts from './CategoryProducts';
 import ProductSlider from './ProductSlider';
 import SubCategories from './SubCategories';
 import MoreCategories from './MoreCategories';
+import withAPICall from 'hoc/withApiCall';
+import { HOME } from 'api/routes';
 
-export default function index() {
+const apiParams = {
+  url: HOME.url + '1'
+}
+
+const Home = ({ header_category, banner }) => {
+
   return (
     <div className="home">
-      <Categories />
-      <Carousel />
+      <Categories data={header_category} />
+      <Carousel data={banner} />
       <CategoryProducts />
       <ProductSlider />
       <SubCategories />
@@ -19,3 +26,5 @@ export default function index() {
     </div>
   )
 }
+
+export default withAPICall(Home, apiParams);

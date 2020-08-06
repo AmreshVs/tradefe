@@ -3,7 +3,7 @@ import { X } from 'react-bootstrap-icons';
 
 export default function Login() {
   return (
-    <div className="modal fade login" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
+    <div className="modal fade login" id="loginModal" tabIndex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered" role="document">
         <div className="modal-content shadow">
           <div className="modal-body">

@@ -1,6 +1,7 @@
 import React from 'react';
+import { APP_URL } from 'common';
 
-export default function Carousel() {
+export default function Carousel({ data }) {
   return (
     <div id="carousel" className="carousel slide" data-ride="carousel">
       <ol className="carousel-indicators">
@@ -9,15 +10,11 @@ export default function Carousel() {
         <li data-target="#carousel" data-slide-to="2"></li>
       </ol>
       <div className="carousel-inner">
-        <div className="carousel-item active">
-          <svg className="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: First slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
-        </div>
-        <div className="carousel-item">
-          <svg className="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Second slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
-        </div>
-        <div className="carousel-item">
-          <svg className="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Third slide"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
-        </div>
+        {data.map((item, index) => (
+          <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+            <img className="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src={APP_URL + item.banner_image_path} alt={item.banner_name} />
+          </div>
+        ))}
       </div>
       <a className="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>

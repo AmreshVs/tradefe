@@ -3,7 +3,7 @@ import { X } from 'react-bootstrap-icons';
 
 export default function Signup() {
   return (
-    <div className="modal fade signup" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalTitle" aria-hidden="true">
+    <div className="modal fade signup" id="signupModal" tabIndex="-1" role="dialog" aria-labelledby="signupModalTitle" aria-hidden="true">
       <div className="modal-dialog modal-dialog-centered" role="document">
         <div className="modal-content shadow">
           <div className="modal-body">
