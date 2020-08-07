@@ -40,6 +40,19 @@
   }
 }
 
+.carousel-inner{
+  .carousel-item{
+    img{
+      height: 400px;
+    }
+  }
+}
+
+.slideProducts{
+  display: inline-table;
+  width: 200px;
+}
+
 // Responsive
 @include media-breakpoint-down(xs){
   .categories{
