@@ -27,6 +27,6 @@ export default function withAPICall(Component, params) {
       }
     }
 
-    return state.loading === true ? <Loader /> : <Component {...state.data} />
+    return state.loading === true ? <Loader /> : <Component data={state.data} />
   }
 }

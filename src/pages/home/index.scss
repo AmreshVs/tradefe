@@ -51,6 +51,11 @@
 .slideProducts{
   display: inline-table;
   width: 200px;
+
+  .img-fluid{
+    width: 100%;
+    height: 150px;
+  }
 }
 
 // Responsive

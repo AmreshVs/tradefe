@@ -4,7 +4,7 @@ import { TelephoneOutboundFill, ChatRightQuoteFill } from 'react-bootstrap-icons
 import Card from 'components/card';
 import ProductImages from './productImages';
 
-export default function ProductImageDesc() {
+export default function ProductImageDesc({ name, spec, price, unit, images }) {
 
   const Attributes = ({ pkey, pvalue }) => {
     return (
@@ -24,16 +24,16 @@ export default function ProductImageDesc() {
   return (
     <Card header="Product Images & Details" hover>
       <div className="row">
-        <ProductImages />
+        <ProductImages images={images} />
         <div className="col-md-12 col-lg-6 col-12 pl-4">
-          <h2 className="mb-0">Disposable KN95 Mask</h2>
+          <h2 className="mb-0">{name}</h2>
           <div className="d-flex align-items-center">
-            <span className="price text-success pr-1">₹ 250</span>
-            <span className="text-muted"> / Piece</span>
+            <span className="price text-success pr-1">₹ {price}</span>
+            <span className="text-muted"> / {unit}</span>
           </div>
           <div className="pt-2">
-            {Array(6).fill(0).map((item, index) => (
-              <Attributes pkey="Disposability" pvalue="Disposable" key={index} />
+            {spec.map((item, index) => (
+              <Attributes pkey={item.item_specification_name} pvalue={item.item_specification_value} key={index} />
             ))}
           </div>
           <div className="row mt-5">

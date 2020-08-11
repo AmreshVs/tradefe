@@ -43,6 +43,13 @@ body {
   min-height: calc(100vh - 58.5px);
 }
 
+.loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 58.5px);
+}
+
 // Responsive
 @include media-breakpoint-down(xs){
   .bg-primary .container{

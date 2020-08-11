@@ -10,17 +10,17 @@ import withAPICall from 'hoc/withApiCall';
 import { HOME } from 'api/routes';
 
 const apiParams = {
-  url: HOME.url + '10'
+  url: HOME.url
 }
 
-const Home = ({ header_category, banner, category_group, products, all_category }) => (
+const Home = ({ data }) => (
   <div className="home">
-    <Categories data={header_category} />
-    <Carousel data={banner} />
-    <CategoryProducts data={category_group} />
-    <ProductSlider data={products} />
-    <SubCategories />
-    <MoreCategories data={all_category} />
+    <Categories data={data.header_category} />
+    <Carousel data={data.banner} />
+    <CategoryProducts data={data.category_with_subcategory} />
+    <ProductSlider data={data.products} />
+    <SubCategories data={data.category_group} />
+    <MoreCategories data={data.all_category} />
   </div>
 )
 

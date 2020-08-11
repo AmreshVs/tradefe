@@ -51,6 +51,18 @@
   }
 }
 
+.similarProduct{
+  width: 200;
+  display: inline-table;
+
+  .img-fluid{
+    width: 100%;
+    height: 150px;
+    min-height: 150px;
+    min-width: 180px;
+  }
+}
+
 @include media-breakpoint-down(sm) {
   .productDetail{
 

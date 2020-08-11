@@ -20,7 +20,7 @@ export default function ProductSlider({ data }) {
             <Slider header="Top Moving Products" rightAction={<RightAction />}>
               {data.map((item, index) => (
                 <div key={index} className="p-3 slideProducts">
-                  <img className="img-fluid rounded shadow" src={APP_URL + '/' + item.item_image.image_path} alt="product" />
+                  <img className="img-fluid rounded shadow" loading="lazy" src={APP_URL + '/' + item.item_image?.image_path} alt={item.item_name} />
                   <p className="mb-0">{item.item_name}</p>
                 </div>
               ))}

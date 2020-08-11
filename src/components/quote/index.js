@@ -21,7 +21,7 @@ export default function Quote() {
         <div className="col-xl-8 col-md-12 col-8">
           <div className="form-group">
             <label>Price Range</label>
-            <select class="form-control">
+            <select className="form-control">
               <option>Less than 1,000</option>
               <option>1,000 to 5,000</option>
               <option>5,000 to 10,000</option>
